@@ -62,3 +62,17 @@ int main() {
     printf("---------------------------------------------\n");
     scanf("%d", &primeiroDiaDoAno);
     system("clear");
+
+    // Definir o número de dias em cada mês
+    diasNoMes[1] = 31;
+    diasNoMes[2] = ehBissexto(ano) ? 29 : 28;
+    diasNoMes[3] = 31;
+    diasNoMes[4] = 30;
+    diasNoMes[5] = 31;
+    diasNoMes[6] = 30;
+    diasNoMes[7] = 31;
+    diasNoMes[8] = 31;
+    diasNoMes[9] = 30;
+    diasNoMes[10] = 31;
+    diasNoMes[11] = 30;
+    diasNoMes[12] = 31;
