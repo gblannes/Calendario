@@ -76,3 +76,9 @@ int main() {
     diasNoMes[10] = 31;
     diasNoMes[11] = 30;
     diasNoMes[12] = 31;
+
+     // Definir o primeiro dia da semana de cada mês
+    primeiroDiaDoMes[1] = primeiroDiaDoAno;
+    for (int mes = 2; mes <= 12; mes++) {
+        primeiroDiaDoMes[mes] = (primeiroDiaDoMes[mes - 1] + diasNoMes[mes - 1]) % 7;
+    }
