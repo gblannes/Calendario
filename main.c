@@ -108,7 +108,7 @@ int main() {
                           exibirCalendario(diasNoMes[mes], primeiroDiaDoMes[mes]);
                           printf("============================");
                       }
-                      break;
+                        break;
                     case 2:
                       // Opção 2: Inserir agendamento
                       {
@@ -130,4 +130,28 @@ int main() {
                               printf("Não é possível agendar neste dia.\n");
                           }
                       }
+                         break;
+                     case 3:
+                      // Opção 3: Mostrar o calendário com agendamentos
+                      printf("\n\tCalendário de %d\n\tcom agendamentos\n", ano);
+                      printf("============================");
+                      for (int mes = 1; mes <= 12; mes++) {
+                          printf("\n\t\t%d / %d\n", mes, ano);
+                          printf("----------------------------\n");
+
+                          exibirCalendarioComAgendamentos(diasNoMes[mes], primeiroDiaDoMes[mes], agenda);
+                          printf("============================");
+                      }
+                          break;
+                      case 4:
+                      // Opção 4: Sair
+                      printf("Saindo...\n");
                       break;
+                  default:
+                      // Opção inválida
+                      printf("Opção inválida. Tente novamente.\n");
+              }
+          } while (opcao != 4);
+
+          return 0;
+      }
