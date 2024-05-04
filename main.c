@@ -109,3 +109,25 @@ int main() {
                           printf("============================");
                       }
                       break;
+                    case 2:
+                      // Opção 2: Inserir agendamento
+                      {
+                          int mes, dia, duracao;
+                          printf("Digite o mês do agendamento: ");
+                          scanf("%d", &mes);
+                          printf("------------------------------\n");
+                          printf("Digite o dia do agendamento: ");
+                          scanf("%d", &dia);
+                          printf("------------------------------\n");
+                          printf("Digite a duração do agendamento em dias: ");
+                          scanf("%d", &duracao);
+                          system("clear");
+
+                          if (verificarAgendamento(agenda, dia, duracao)) {
+                              inserirAgendamento(agenda, dia, duracao);
+                              printf("Agendamento inserido com sucesso.\n");
+                          } else {
+                              printf("Não é possível agendar neste dia.\n");
+                          }
+                      }
+                      break;
