@@ -82,3 +82,30 @@ int main() {
     for (int mes = 2; mes <= 12; mes++) {
         primeiroDiaDoMes[mes] = (primeiroDiaDoMes[mes - 1] + diasNoMes[mes - 1]) % 7;
     }
+
+     int opcao;
+    do {
+       // Menu de opções
+              printf("\n\n------------MENU------------\n");
+              printf("1. Mostrar o calendário\n");
+              printf("2. Inserir agendamento\n");
+              printf("3. Mostrar o calendário com agendamentos\n");
+              printf("4. Sair\n");
+              printf("----------------------------\n");
+              printf("Escolha uma opção: ");
+              scanf("%d", &opcao);
+              printf("----------------------------\n");
+              system("clear");
+        //Definindo a lógica de cada opção do Menu
+              switch (opcao) {
+                  case 1:
+                      // Opção 1: Mostrar o calendário
+                      printf("\n\tCalendário de %d\n", ano);
+                      printf("============================");
+                      for (int mes = 1; mes <= 12; mes++) {
+                          printf("\n\t\t\t%d / %d\n", mes, ano);
+                          printf("----------------------------\n");
+                          exibirCalendario(diasNoMes[mes], primeiroDiaDoMes[mes]);
+                          printf("============================");
+                      }
+                      break;
