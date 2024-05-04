@@ -15,7 +15,6 @@ typedef struct {
 int ehBissexto(int ano) {
     return (ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0);
 }
-Nesta parte, foi definida a estrutura Agendamento e implementada a função ehBissexto, responsável por verificar se um ano é bissexto. Essa parte parece ter sido feita por uma pessoa.
 
 // Função para obter o dia da semana do primeiro dia do ano
 // Parâmetros:
@@ -47,3 +46,19 @@ void exibirCalendario(int diasNoMes, int primeiroDia) {
         }
     }
 }
+
+//coloque a sua parte aqui Pedro <<<<<<---------------------
+
+////////////////////Main_Início//////////////////////
+int main() {
+    int ano, primeiroDiaDoAno, diasNoMes[13], primeiroDiaDoMes[13];
+    int agenda[366] = {0}; // Supondo que o ano tem no máximo 366 dias
+
+    // Solicitar ao usuário o ano e o primeiro dia da semana
+    printf("Digite o ano: ");
+    scanf("%d", &ano);
+    printf("---------------------------------------------\n");
+    printf("Digite o primeiro dia da semana.\nEx.: (0)Domingo, (1)Segunda, ..., (6)Sábado.\n");
+    printf("---------------------------------------------\n");
+    scanf("%d", &primeiroDiaDoAno);
+    system("clear");
